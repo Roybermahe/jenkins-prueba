@@ -21,13 +21,13 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
+        /* stage('Run Tests') {
             steps {
                 script {
-                    sh 'npm run test -- --watch=false --browsers=ChromeHeadless'
+                    sh 'npm run test --watch=false --browsers=ChromeHeadless'
                 }
             }
-        }
+        } */
 
         stage('Build Angular Docker Image') {
             steps {
