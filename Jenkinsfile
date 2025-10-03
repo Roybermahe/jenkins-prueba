@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "angular-sakai"
         CONTAINER_NAME = "angular-sakai-container"
-        GH_TOKEN = credentials("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")
+        GH_TOKEN = "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"
     }
 
     stages {
