@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        nodejs "Node24.9.0"
+    }
     environment {
         IMAGE_NAME = "angular-sakai"
         CONTAINER_NAME = "angular-sakai-container"
