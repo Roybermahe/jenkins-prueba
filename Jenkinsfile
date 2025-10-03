@@ -29,19 +29,10 @@ pipeline {
             }
         } */
 
-        stage('Build Angular Docker Image') {
+        stage('Build Angular') {
             steps {
                 script {
-                    sh 'docker build -t $IMAGE_NAME .'
-                }
-            }
-        }
-
-        stage('Run Container') {
-            steps {
-                script {
-                    sh 'docker rm -f $CONTAINER_NAME || true'
-                    sh 'docker run -d --name $CONTAINER_NAME -p 4201:4200 $IMAGE_NAME'
+                    sh 'npm run build'
                 }
             }
         }
