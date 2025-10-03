@@ -41,7 +41,6 @@ pipeline {
         stage('Deploy in github pages') {
             steps {
                 script {
-                    sh 'npm install -g angular-cli-ghpages'
                     sh 'npx angular-cli-ghpages --dir=dist/sakai-ng/browser --repo=https://${GH_TOKEN}@github.com/Roybermahe/jenkins-prueba.git --silent=false'
                 }
             }
