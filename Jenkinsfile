@@ -41,7 +41,7 @@ pipeline {
             steps {
                 script {
                     sh 'npm install -g angular-cli-ghpages'
-                    sh 'npx angular-cli-ghpages --dir=dist/sakai-ng'
+                    sh 'npx angular-cli-ghpages --dir=dist/sakai-ng/browser'
                 }
             }
         }
