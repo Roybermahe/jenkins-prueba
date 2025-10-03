@@ -4,6 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "angular-sakai"
         CONTAINER_NAME = "angular-sakai-container"
+        GH_TOKEN = "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"
     }
 
     stages {
@@ -41,7 +42,7 @@ pipeline {
             steps {
                 script {
                     sh 'npm install -g angular-cli-ghpages'
-                    sh 'npx angular-cli-ghpages --dir=dist/sakai-ng'
+                    sh 'npx angular-cli-ghpages --dir=dist/sakai-ng/browser --repo=https://${GH_TOKEN}@github.com/Roybermahe/jenkins-prueba.git --silent=false'
                 }
             }
         }
