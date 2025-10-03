@@ -36,6 +36,15 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy in github pages') {
+            steps {
+                script {
+                    sh 'npm install -g angular-cli-ghpages'
+                    sh 'npx angular-cli-ghpages --dir=dist/sakai-ng'
+                }
+            }
+        }
     }
 
     post {
